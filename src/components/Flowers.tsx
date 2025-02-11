@@ -1,5 +1,5 @@
 import { useThree } from "@react-three/fiber";
-import { FunctionComponent, useMemo } from "react";
+import { FunctionComponent } from "react";
 import { Vector3 } from "three";
 import { Flower } from "./Flower";
 

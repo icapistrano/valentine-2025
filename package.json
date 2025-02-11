@@ -1,16 +1,19 @@
 {
   "name": "valentines",
-  "description": "Boilerplate for r3f and tailwind with vite",
+  "description": "Valentines 2025",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://icapistrano.github.io/valentine-2025/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^9.65.3",
@@ -28,6 +31,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^9.18.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.22",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.7",

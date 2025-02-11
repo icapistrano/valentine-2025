@@ -7,7 +7,7 @@ Title: Hand with a bouquet of flowers / mano low poly
 */
 
 import * as THREE from "three";
-import React, { FunctionComponent, useEffect, useMemo, useRef } from "react";
+import { FunctionComponent, useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { useFrame } from "@react-three/fiber";

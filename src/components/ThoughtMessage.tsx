@@ -1,7 +1,7 @@
 import { Html } from "@react-three/drei";
 import { FunctionComponent, useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { Group } from "three";
+import { Group, Vector3 } from "three";
 
 export const ThoughtMessage: FunctionComponent<{
   message: string;
@@ -18,7 +18,9 @@ export const ThoughtMessage: FunctionComponent<{
   const isMobile = size.width < 768;
 
   const target = useMemo(() => {
-    return isMobile ? [0, -5, 0] : position;
+    return isMobile
+      ? new Vector3().fromArray([0, -5, 0])
+      : new Vector3().fromArray(position);
   }, [isMobile]);
 
   useFrame((_, delta) => {
@@ -43,7 +45,7 @@ export const ThoughtMessage: FunctionComponent<{
         // on mount
       } else if (
         isVisible &&
-        groupRef.current.position.y <= target[1] + offsetY
+        groupRef.current.position.y <= target.y + offsetY
       ) {
         groupRef.current.position.y += delta * 0.5;
       }
