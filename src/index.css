@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.canvas-bg {
+  background: radial-gradient(#d6b5d6, #fff);
+}
+
+.blood-bg {
+  background: radial-gradient(#9756577d, #ffffff9a);
+  animation: fullBloodKeyframe 8s forwards;
+}
+
+@keyframes fullBloodKeyframe {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    background: #7d141c;
+  }
+
+  100% {
+    opacity: 0;
+    background: radial-gradient(#a14f51c2, #ffffff9a);
+  }
+}
+
+.blood-splat {
+  animation: bloodSplatKeyframe 6s forwards;
+}
+
+@keyframes bloodSplatKeyframe {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
